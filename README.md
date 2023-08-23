@@ -1,7 +1,11 @@
 # Strapi instagram plugin
 ![strapi-plugin-instagram](https://user-images.githubusercontent.com/531009/208746882-a3e581d9-0970-41ec-93de-bf482261b7ae.png)
 
-This is a Plugin for [Strapi headless CMS](https://strapi.io/) to download image links (or images in Pro version) from Instagram. 
+This is a Plugin for [Strapi headless CMS](https://strapi.io/) to download image links (or images in Pro version) from Instagram. It is based on strapi-plugin-instagram by [webvibe.io](https://github.com/webvibe-io/strapi-plugin-instagram) with following changes by [Sven Westerlaken](https://github.com/SvenWesterlaken):
+- Reels did not show up, we wanted to use the thumbnails of these in the feed
+- Permalinks (links to the actual post on Instagram) were missing
+- Most importantly, the image links expire after 1 week as these were not updated if a post already existed in the database
+- Added checkbox to include videos in download
 
 - [Features](#features)
 - [Installation](#installation)
@@ -28,7 +32,11 @@ If you have any other request just let me know!
 
 ## Installation
 ```bash
-npm i @webvibe-io/strapi-plugin-instagram
+npm i strapi-plugin-instagram-extended
+```
+
+```bash
+yarn add strapi-plugin-instagram-extended
 ```
 
 ## Configuration
